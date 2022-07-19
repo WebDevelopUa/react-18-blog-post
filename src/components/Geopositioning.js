@@ -1,3 +1,5 @@
+import Loading from "./Loading";
+
 const Geopositioning = ({lat, lon, err}) => {
     if (!err && lat && lon) {
         return (
@@ -7,7 +9,7 @@ const Geopositioning = ({lat, lon, err}) => {
             </ul>
         )
     } else if (!err && !lat && !lon) {
-        return <p>Loading ...</p>
+        return <Loading />
 
     } else return <p>{err}. Please Enable Geolocation Access in web browser. </p>
 }

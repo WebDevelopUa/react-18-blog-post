@@ -24,13 +24,14 @@ const Contact = () => {
         }, []
     )
 
-
-
     return (
         <>
             <h1>Contact Us</h1>
             <h2>Your Geolocation:</h2>
-            <Geopositioning lat={latitude} lon={longitude} err={errorMessage}/>
+            <Geopositioning lat={latitude}
+                            lon={longitude}
+                            err={errorMessage}
+            />
         </>
 
     );
