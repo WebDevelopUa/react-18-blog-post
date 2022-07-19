@@ -15,10 +15,10 @@ export default function App() {
                     <Route index element={<Home/>}/>
                     <Route path="blogs" element={<Blogs/>}/>
                     <Route path="blogs/description" element={<PostDescription/>}/>
-                        <Route path="contact" element={<Contact/>}/>
-                        <Route path="*" element={<NoPage/>}/>
-                        </Route>
-                        </Routes>
-                        </BrowserRouter>
-                        );
-                    }
+                    <Route path="contact" element={<Contact/>}/>
+                    <Route path="*" element={<NoPage/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
+}
