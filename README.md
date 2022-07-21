@@ -6,6 +6,11 @@ Blog Post + Semantic UI - React 18.2 App
 - [Semantic UI](https://cdnjs.com/libraries/semantic-ui) - `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css`
 - [Semantic UI React](https://react.semantic-ui.com) - `npm i semantic-ui-react semantic-ui-css` + `import 'semantic-ui-css/semantic.min.css'`
 - [Faker](https://www.npmjs.com/package/faker) - `npm i faker`
+- [axios](https://www.npmjs.com/package/axios) - `npm i axios`
+- [Unsplash API](https://unsplash.com/developers)
+- [Unsplash App](https://unsplash.com/oauth/applications)
+- Access Key `id-zPQ9_VR8YvApMDzNeGhehuSR4eL5Us0Y7gmAnYV8`
+- [Search photos](https://unsplash.com/documentation#search-photos)
 
 ```shell
 npm i
