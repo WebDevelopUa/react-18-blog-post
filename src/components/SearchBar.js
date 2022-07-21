@@ -1,12 +1,19 @@
 import {useState} from "react";
 
-const SearchBar = () => {
+const SearchBar = ({onSubmit}) => {
     const [imageName, setImageName] = useState('');
+
+    const onFormSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(imageName);
+    }
 
     return (
         <>
             <div className="ui segment">
-                <form className="ui form">
+                <form
+                    onSubmit={onFormSubmit}
+                    className="ui form">
                     <div className="field">
                         <label>Image Search</label>
                         <input type="text"
@@ -17,9 +24,8 @@ const SearchBar = () => {
                 </form>
             </div>
             <p>{imageName}</p>
-            <p>{imageName.length < 4 ? 'input value must be at least 4 characters' : ''}</p>
+            <p>{imageName.length < 5 ? 'input value must be at least 5 characters' : ''}</p>
         </>
-
     )
 }
 export default SearchBar
