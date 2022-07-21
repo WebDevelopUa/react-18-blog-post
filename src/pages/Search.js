@@ -1,7 +1,8 @@
 import SearchBar from "../components/SearchBar";
 import {useState} from "react";
 import unsplash from "../api/unsplash";
-import UnsplashImageList from "../components/UnsplashImageList";
+import ImageList from "../components/ImageList";
+import ImageListGrid from "../components/ImageListGrid";
 
 const Search = () => {
 
@@ -28,7 +29,10 @@ const Search = () => {
             <SearchBar onSubmit={getSearchTerm}/>
             <p>Result: {images.length} images found</p>
 
-            <UnsplashImageList images={images}/>
+            <ImageListGrid>
+                <ImageList images={images}/>
+            </ImageListGrid>
+
         </div>
     )
 }
