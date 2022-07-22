@@ -1,12 +1,14 @@
 import {useEffect, useState} from "react";
 import {Comment, Container} from 'semantic-ui-react'
 import Post from "../components/Post";
+import {postsApiUrl} from "../config";
 
 const Blogs = () => {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
+    const url = postsApiUrl
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+        console.log('useEffect run after initial render; Fetch data on component mount');
         fetch(url)
             .then(response => {
                 if (!response.ok) {

@@ -1,11 +1,21 @@
 import {useState} from "react";
+import {useRef} from "react";
 
-const SearchBar = ({onSubmit}) => {
+const SearchBar = ({onSubmit, onChange}) => {
     const [imageName, setImageName] = useState('');
+    const inputElement = useRef();
 
     const onFormSubmit = (e) => {
         e.preventDefault();
+        // console.log(`inputElement.current.value: ${inputElement.current.value}`);
+        setImageName(inputElement.current.value);
         onSubmit(imageName);
+    }
+
+    const onInputChange = () => {
+        setImageName(inputElement.current.value);
+        // console.log(`inputElement.current.value: ${inputElement.current.value}`);
+        onChange(inputElement.current.value);
     }
 
     return (
@@ -18,13 +28,14 @@ const SearchBar = ({onSubmit}) => {
                         <label>Image Search</label>
                         <input type="text"
                                value={imageName}
-                               onChange={(e) => setImageName(e.target.value)}
+                               ref={inputElement}
+                               onChange={onInputChange}
                         />
                     </div>
                 </form>
             </div>
             <p>{imageName}</p>
-            <p>{imageName.length < 5 ? 'input value must be at least 5 characters' : ''}</p>
+            <p>{imageName && imageName.length < 3 ? 'input value must be at least 3 characters' : ''}</p>
         </>
     )
 }
