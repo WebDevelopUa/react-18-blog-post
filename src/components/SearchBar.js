@@ -9,12 +9,12 @@ const SearchBar = ({onSubmit, onChange}) => {
         e.preventDefault();
         // console.log(`inputElement.current.value: ${inputElement.current.value}`);
         setImageName(inputElement.current.value);
-        onSubmit(imageName);
+        onSubmit(inputElement.current.value);
     }
 
     const onInputChange = () => {
-        setImageName(inputElement.current.value);
         // console.log(`inputElement.current.value: ${inputElement.current.value}`);
+        setImageName(inputElement.current.value);
         onChange(inputElement.current.value);
     }
 

@@ -4,12 +4,11 @@ import Post from "../components/Post";
 import {postsApiUrl} from "../config";
 
 const Blogs = () => {
-    const url = postsApiUrl
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         console.log('useEffect run after initial render; Fetch data on component mount');
-        fetch(url)
+        fetch(postsApiUrl)
             .then(response => {
                 if (!response.ok) {
                     return Error('Something went wrong ...')
