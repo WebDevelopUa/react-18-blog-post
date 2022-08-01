@@ -23,6 +23,11 @@ npm run start
 
 # Hints
 
+* [Lang codes](https://datahub.io/core/language-codes)
+* [Google Translation APIs documents](https://cloud.google.com/translate/docs/apis)
+* [Google Translation Languagws](https://cloud.google.com/translate/docs/languages)
+* [Google Translation Reference documents](https://cloud.google.com/translate/docs/reference/rest/v2/translate) => `POST https://translation.googleapis.com/language/translate/v2`
+* Google Translate API Key => `AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`; This API can only be used when your browser is at http://localhost:3000
 * [Container](https://react.semantic-ui.com/elements/container/)
 
 ```jsx

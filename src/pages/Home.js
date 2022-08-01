@@ -7,7 +7,7 @@ import {useState} from "react";
 
 const Home = () => {
     const [selected, setSelected] = useState(dropdownColors[0]);
-    const [showDropdown, setShowDropdown] = useState(true);
+    const [showDropdown, setShowDropdown] = useState(false);
     return (
         <div>
             <h1>Homepage</h1>

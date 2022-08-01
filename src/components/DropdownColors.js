@@ -2,8 +2,8 @@ import {useEffect, useRef, useState} from "react";
 
 const DropdownColors = ({options, selected, onSelectedChange}) => {
     const [open, setOpen] = useState(false);
-    const uiFormRef = useRef()
-    ;
+    const uiFormRef = useRef();
+
     useEffect(
         () => {
             console.log('useEffect - Set manual event listener to a body');

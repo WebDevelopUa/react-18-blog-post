@@ -18,6 +18,9 @@ const Layout = () => {
                         <Link to="/faq">FAQ</Link>
                     </li>
                     <li>
+                        <Link to="/translate">Translate</Link>
+                    </li>
+                    <li>
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
