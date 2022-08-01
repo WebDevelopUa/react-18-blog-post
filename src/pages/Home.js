@@ -3,11 +3,14 @@ import NegativeButton from "../components/NegativeButton";
 import Group from "../components/Group";
 import DropdownColors from "../components/DropdownColors";
 import {dropdownColors} from "../data/dropdownColors";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import LanguageContext from "../contexts/LanguageContext";
 
 const Home = () => {
     const [selected, setSelected] = useState(dropdownColors[0]);
     const [showDropdown, setShowDropdown] = useState(false);
+    const languageContextValue = useContext(LanguageContext);
+
     return (
         <div>
             <h1>Homepage</h1>
@@ -25,9 +28,9 @@ const Home = () => {
             </p>
 
             <button
-                className="ui button"
+                className="ui button primary"
                 onClick={() => setShowDropdown(!showDropdown)}>
-                Show Dropdown
+                {languageContextValue === 'english' && 'Show Dropdown' || languageContextValue === 'french' && 'Show Dropdown (french)' || languageContextValue === 'netherlands' && 'Show Dropdown (netherlands)'}
             </button>
 
             {showDropdown ? (
