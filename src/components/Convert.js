@@ -1,10 +1,11 @@
 import {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {googleTranslateApiKey} from "../config";
+import ErrorMessage from "./ErrorMessage";
 
 const Convert = ({language, text}) => {
 
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState({});
     const [translated, setTranslated] = useState('');
     const [debouncedText, setDebouncedText] = useState(text);
 
@@ -43,9 +44,9 @@ const Convert = ({language, text}) => {
                     console.log(r);
                     setTranslated(r.data.data.transitions[0].translatedText);
                 })
-                .catch(e => {
-                    console.log(e);
-                    setMessage(e.message);
+                .catch(error => {
+                    console.log(error);
+                    setMessage(error);
                 });
 
 
@@ -66,9 +67,9 @@ const Convert = ({language, text}) => {
                 {translated && translated}
             </div>
 
-            <div className={`ui message ${message ? 'red' : 'hidden'}`}>
-                {message && message}
-            </div>
+            <ErrorMessage error={message}>
+                {(message.code === "ERR_NETWORK") && 'Please Check Your Internet Connection.'}
+            </ErrorMessage>
 
         </Fragment>
     )

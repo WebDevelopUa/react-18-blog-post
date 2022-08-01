@@ -5,11 +5,13 @@ import ImageListGrid from "../components/ImageListGrid";
 import {wikipediaApiUrl, wikipediaPageUrl} from "../config";
 import wiki from "../api/wiki";
 import unsplash from "../api/unsplash";
+import ErrorMessage from "../components/ErrorMessage";
 
 const Search = () => {
     const [images, setImages] = useState([]);
     const [texts, setTexts] = useState([]);
     const [term, setTerm] = useState('');
+    const [message, setMessage] = useState({});
 
     useEffect(() => {
         console.log('useEffect run after initial render & every render');
@@ -34,9 +36,14 @@ const Search = () => {
                         query: term
                     }
                 }
-            ).then(
-                response => setImages(response.data.results)
             )
+                .then(
+                    response => setImages(response.data.results)
+                )
+                .catch(error => {
+                    console.log(error);
+                    setMessage(error);
+                });
         }
 
         // Delayed request
@@ -72,6 +79,10 @@ const Search = () => {
             <ImageListGrid>
                 <ImageList images={images}/>
             </ImageListGrid>
+
+            <ErrorMessage error={message}>
+                {(message.code === "ERR_NETWORK") && 'Please Check Your Internet Connection.'}
+            </ErrorMessage>
 
             <ul>
                 {texts.map(
