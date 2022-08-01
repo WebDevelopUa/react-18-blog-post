@@ -58,7 +58,7 @@ const Search = () => {
 
         // Cleanup timeout
         return () => {
-            console.log(' --- useEffect CLEANUP ---  ');
+            console.log('------------------ useEffect Cleanup Timeout   ------------------');
             clearTimeout(timeoutId)
         }
 

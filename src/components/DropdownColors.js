@@ -23,8 +23,9 @@ const DropdownColors = ({options, selected, onSelectedChange}) => {
             document.body.addEventListener('click', onBodyClick, {capture: true});
 
             return () => {
+                console.log('------------------ useEffect Cleanup even listener   ------------------');
                 // Cleanup even listener
-                document.body.removeEventListener('click', onBodyClick)
+                document.body.removeEventListener('click', onBodyClick, {capture: true});
             }
 
         }, []
