@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Comment, Container} from 'semantic-ui-react'
+import {Comment} from 'semantic-ui-react'
 import Post from "../components/Post";
 import {postsApiUrl} from "../config";
 
@@ -21,10 +21,10 @@ const Blogs = () => {
     }, [])
 
     return (
-        <Container>
+        <div>
             <h1>Blog Posts Page</h1>
-            <div className="App">
-                <h1> Posts: </h1>
+            <div>
+                <h2> Posts: </h2>
                 {posts
                     .map(post => <div key={post.id}>
                         <Comment.Group>
@@ -35,7 +35,7 @@ const Blogs = () => {
                         </Comment.Group>
                     </div>)}
             </div>
-        </Container>
+        </div>
     )
 };
 
