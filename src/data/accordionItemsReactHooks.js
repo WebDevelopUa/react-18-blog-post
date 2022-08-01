@@ -1,4 +1,4 @@
-export const accordionItems = [
+export const accordionItemsReactHooks = [
     {
         id: 1,
         title: 'useState',
