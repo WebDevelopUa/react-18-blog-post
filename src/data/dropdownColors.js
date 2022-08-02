@@ -16,12 +16,12 @@ export const dropdownColors = [
     },
     {
         id:4,
-        label: 'Orange txt color',
+        label: 'Orange text color',
         value: 'orange'
     },
     {
         id:5,
-        label: 'Black txt color',
+        label: 'Black text color',
         value: 'black'
     },
 
