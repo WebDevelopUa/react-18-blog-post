@@ -11,6 +11,8 @@ const Home = () => {
     const [showDropdown, setShowDropdown] = useState(false);
     const languageContextValue = useContext(LanguageContext);
 
+    const renderLanguageContextValue = (value) => value === 'english' && 'Show Dropdown' || languageContextValue === 'french' && 'Afficher la liste déroulante' || languageContextValue === 'netherlandish' && 'Dropdownmenu weergeven'
+
     return (
         <div>
             <h1>Homepage</h1>
@@ -30,7 +32,7 @@ const Home = () => {
             <button
                 className="ui button primary"
                 onClick={() => setShowDropdown(!showDropdown)}>
-                {languageContextValue === 'english' && 'Show Dropdown' || languageContextValue === 'french' && 'Show Dropdown (french)' || languageContextValue === 'netherlands' && 'Show Dropdown (netherlands)'}
+                {renderLanguageContextValue(languageContextValue)}
             </button>
 
             {showDropdown ? (

@@ -7,10 +7,10 @@ const ButtonExamplePositive = () => {
     const getLanguage = (value) => {
         if (value === 'english') {
             return 'Submit'
-        } else if (value === 'netherlands') {
-            return 'Submit (netherlands)'
+        } else if (value === 'netherlandish') {
+            return 'Indienen'
         } else if (value === 'french') {
-            return 'Submit (french)'
+            return 'Soumettre'
         } else {
             return 'Submit (undefined)'
         }

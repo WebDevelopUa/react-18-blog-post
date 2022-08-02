@@ -1,11 +1,11 @@
 import {Outlet} from "react-router-dom";
 import AppHeader from "../components/AppHeader";
-import {Container} from "semantic-ui-react";
+import {Container, Flag} from "semantic-ui-react";
 import {useState} from "react";
 import LanguageContext from "../contexts/LanguageContext";
 
 const AppLayout = () => {
-    const [language, setLanguage] = useState('netherlands');
+    const [language, setLanguage] = useState('netherlandish');
 
     const onLanguageChange = (lang) => {
         setLanguage(lang);
@@ -15,9 +15,9 @@ const AppLayout = () => {
         <Container>
             <div>
                 Select a Language: &nbsp;
-                <i className="ui flag netherlands" onClick={() => onLanguageChange('netherlands')}>NL</i>
-                <i className="ui flag fr" onClick={() => onLanguageChange('french')}>FR</i>
-                <i className="ui flag en" onClick={() => onLanguageChange('english')}>EN</i>
+                <Flag name='netherlands' onClick={() => onLanguageChange('netherlandish')}/>
+                <Flag name='fr' onClick={() => onLanguageChange('french')}/>
+                <Flag name='canada' onClick={() => onLanguageChange('english')}/>
             </div>
 
             <p className="ui header centered green">

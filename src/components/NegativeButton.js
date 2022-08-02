@@ -7,7 +7,7 @@ const ButtonExampleNegative = () => {
 
     return (
         <Button negative>
-            {languageContextValue === 'english' && 'Submit' || languageContextValue === 'french' && 'Submit (french)' || languageContextValue === 'netherlands' && 'Submit (netherlands)'}
+            {languageContextValue === 'english' && 'Submit' || languageContextValue === 'french' && 'Soumettre' || languageContextValue === 'netherlandish' && 'Indienen'}
         </Button>
     );
 }
