@@ -9,6 +9,8 @@ const Faq = () => (
             <h2><a href="" rel="noreferrer noopener" target="_blank">Redux Cycle</a></h2>
         </div>
         <Accordion accordionItems={accordionItemsReduxCycle}/>
+        <br/>
+        <p>Redux helps to separate App Business logic from View logic</p>
 
         <br/>
         <br/>

@@ -27,6 +27,7 @@ const Home = () => {
                 Selected color is: {selected.value}
             </p>
 
+            {/* Implement local Context Provider only for the button; hardcoded value */}
             <ColorContext.Provider value="primary">
                 <DropdownButton
                     showDropdown={showDropdown}

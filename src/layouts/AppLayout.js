@@ -15,6 +15,7 @@ const AppLayout = () => {
 
             <p className="ui header centered green">{language.toUpperCase()}</p>
 
+            {/* Implement global Context Provider */}
             <LanguageContext.Provider value={language}>
                 <AppHeader/>
                 <Outlet/>
