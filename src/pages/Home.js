@@ -6,6 +6,7 @@ import {dropdownColors} from "../data/dropdownColors";
 import {useState} from "react";
 import ColorContext from "../contexts/ColorContext";
 import DropdownButton from "../components/DropdownButton";
+import AppModal from "../components/AppModal";
 
 const Home = () => {
     const [selected, setSelected] = useState(dropdownColors[0]);
@@ -44,6 +45,10 @@ const Home = () => {
                     onSelectedChange={setSelected}
                 />
             )}
+
+            <br/>
+            <br/>
+            <AppModal/>
 
         </div>
     );

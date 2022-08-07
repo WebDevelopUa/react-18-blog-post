@@ -29,6 +29,8 @@ npm run start
 * [Google Translation Reference documents](https://cloud.google.com/translate/docs/reference/rest/v2/translate) => `POST https://translation.googleapis.com/language/translate/v2`
 * Google Translate API Key => `AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`; This API can only be used when your browser is at http://localhost:3000
 * [Container](https://react.semantic-ui.com/elements/container/)
+* [Modal](https://react.semantic-ui.com/modules/modal/#types-modal)
+* [icons.ttf](https://github.com/Semantic-Org/Semantic-UI-CSS/blob/master/themes/default/assets/fonts/icons.ttf)
 
 ```jsx
 import React from 'react'
