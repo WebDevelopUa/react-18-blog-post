@@ -7,10 +7,20 @@ import {useState} from "react";
 import ColorContext from "../contexts/ColorContext";
 import DropdownButton from "../components/DropdownButton";
 import AppModal from "../components/AppModal";
+import CustomModal from "../components/CustomModal";
+import {useNavigate} from "react-router-dom"
 
 const Home = () => {
+    const [showModal, setShowModal] = useState(true);
     const [selected, setSelected] = useState(dropdownColors[0]);
     const [showDropdown, setShowDropdown] = useState(false);
+
+    const navigate = useNavigate();
+
+    const hideModal = (redirect = '/') => {
+        navigate(redirect);
+        setShowModal(false);
+    }
 
     return (
         <div>
@@ -49,6 +59,28 @@ const Home = () => {
             <br/>
             <br/>
             <AppModal/>
+
+            <br/>
+            <br/>
+            <CustomModal
+                show={showModal}
+                title="Custom modal Title"
+                content="Description can appear on the right"
+                url="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=150"
+                actions={<>
+                    <button
+                        onClick={() => hideModal('/faq')}
+                        className="ui button primary">FAQ
+                    </button>
+                    <button
+                        onClick={() => hideModal('/contact')}
+                        className="ui button">Contact
+                    </button>
+
+                </>}
+                onDismiss={() => hideModal()}
+
+            />
 
         </div>
     );

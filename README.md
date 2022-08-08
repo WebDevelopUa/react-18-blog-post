@@ -31,6 +31,9 @@ npm run start
 * [Container](https://react.semantic-ui.com/elements/container/)
 * [Modal](https://react.semantic-ui.com/modules/modal/#types-modal)
 * [icons.ttf](https://github.com/Semantic-Org/Semantic-UI-CSS/blob/master/themes/default/assets/fonts/icons.ttf)
+* [Upgrading from v5](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrading-from-v5)
+* [useNavigation](https://reactnavigation.org/docs/use-navigation/)
+* 
 
 ```jsx
 import React from 'react'
